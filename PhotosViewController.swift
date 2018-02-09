@@ -39,7 +39,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource {
                 
                 // TODO: Get the posts and store in posts property
                 
-                // TODO: Reload the table view
+                self.tableView.reloadData()
             }
         }
         task.resume()
@@ -64,7 +64,9 @@ class PhotosViewController: UIViewController, UITableViewDataSource {
             let urlString = originalSize["url"] as! String
             // 4.
             let url = URL(string: urlString)
-             cell.photoUIImageView.af_setImage(withURL: url!)
+            
+            cell.photoUIImageView.af_setImage(withURL: url!)
+             
         }
         
         return cell
