@@ -57,7 +57,7 @@ Describe any challenges encountered while building the app.
     
 # Lab 2 - *Tumblr
 
-**Name of your app** is a photo browsing app app using the [The Tumblr API](https://www.tumblr.com/docs/en/api/v2#posts).
+**Tumblr** is a photo browsing app app using the [The Tumblr API](https://www.tumblr.com/docs/en/api/v2#posts).
 
 Time spent: **7** hours spent in total
 
