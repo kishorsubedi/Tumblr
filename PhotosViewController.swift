@@ -72,6 +72,26 @@ class PhotosViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UITableViewCell
+        
+        if let indexPath = tableView.indexPath(for: cell)
+        {
+            let post = posts[indexPath.row]
+            let photos = post["photos"] as! [[String:Any]]
+            let photo = photos[0]
+            
+            let originalSize = photo["original_size"] as! [String: Any]
+            
+            let urlString = originalSize["url"] as! String
+            
+            let vc = segue.destination as! PhotoDetailsViewController
+            vc.tumblrImageURLString = urlString
+        }
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
